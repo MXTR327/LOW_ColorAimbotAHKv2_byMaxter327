@@ -1,4 +1,4 @@
-**Instrucciones de uso del script ColorAimbotAHKv2_byMaxter327**
+**Instrucciones de uso del script**
 
 **Paso 1: Instalación**
 
@@ -6,29 +6,78 @@
 
 **Paso 2: Ejecución**
 
-* Ejecuta el script haciendo doble clic en el archivo `ColorAimbotAHKv2_byMaxter327.ahk`.
+* Ejecuta el script haciendo doble clic en el archivo .exe.
 * El script se ejecutará en segundo plano y comenzará a funcionar automáticamente.
 
 **Paso 3: Uso y Configuración**
 
 **Combinaciones de Teclas:**
-* `F8`: Activa o desactiva el script (activo por isActiveDefault = true  en `config.ini`).
-* `^+d`: (Ctrl + Shift + D) Muestra o Oculta las áreas de disparo.
-* `F12`: Sale de la aplicación.
 * `F5`: Recarga el script.
+* `F8`: Activa o desactiva el script (activo por activo_por_defecto = true  en `config.ini`).
+* `F12`: Sale de la aplicación.
+* `Ctrl + Shift + D`: Muestra o Oculta las áreas de disparo.
 
 **Explicación de Variables en `config.ini`:**
-- `EMCol`: Color del aura del objetivo (en formato hexadecimal).
-- `ColVn`: Valor de rango de colores de visibilidad del objetivo (en números enteros).
-- `OffsetX`: Desplazamiento extra en el eje X para el apuntado mas hacia la derecha (puede ser negativo para apuntar mas hacia la izquierda).
-- `OffsetY`: Desplazamiento extra en el eje Y para el apuntado mas hacia abajo (puede ser negativo para apuntar mas hacia arriba).
-- `SmoothFactor`: Factor de suavizado para el movimiento del apuntado (valores entre 0 y 1).
-- `isActiveDefault`: Estado inicial del script (true = activo, false = inactivo).
-- `CFovX`: Campo de visión en el eje X (en números enteros).
-- `CFovY`: Campo de visión en el eje Y (en números enteros).
-- `AntiShakeX`: Valor para ignorar el movimiento en el eje X (en números enteros).
-- `AntiShakeY`: Valor para ignorar el movimiento en el eje Y (en números enteros).
+# Manual de Configuración
 
+## Sección: *General*
+- *activo_por_defecto*: Define si el aimbot está activado por defecto al iniciar el script.  
+  - `1`: Activado  
+  - `0`: Desactivado
+
+- *color_em*: Código hexadecimal del color que el aimbot debe detectar en la pantalla para apuntar.  
+  - Ejemplo: `0xD82A22` (rojo).
+
+- *col_vn*: Parámetro que ajusta la sensibilidad de la detección del color, generalmente un valor entre 0 y 255.  
+  - Ejemplo: `22` (bajo valor).
+
+- *compensar_x*: Ajuste de compensación horizontal en píxeles para el centro del campo de visión (FOV).  
+  - Ejemplo: `1` (compensación pequeña).
+
+- *compensar_y*: Ajuste de compensación vertical en píxeles para el centro del campo de visión (FOV).  
+  - Ejemplo: `6` (compensación mayor a la horizontal).
+
+- *factor_suavizado*: Ajuste para suavizar el movimiento del aimbot.  
+  - Ejemplo: `0.6` (suavizado bajo).
+
+## Sección: *Área Escaneada*
+- **area_escaneada_x**: Establece el área escaneada en el eje X (horizontal), en porcentaje del ancho total de la pantalla.  
+  - Ejemplo: `85` (85% de la pantalla).
+
+- **area_escaneada_y**: Establece el área escaneada en el eje Y (vertical), en porcentaje del alto total de la pantalla.  
+  - Ejemplo: `60` (60% de la pantalla).
+
+## Sección: *Mouse*
+- *apuntar_con_clic_botton_izquierdo*: Configura si el aimbot debe apuntar al hacer clic con el botón izquierdo del mouse.  
+  - `1`: Activado  
+  - `0`: Desactivado
+
+- *apuntar_con_clic_botton_derecho*: Configura si el aimbot debe apuntar al hacer clic con el botón derecho del mouse.  
+  - `1`: Activado  
+  - `0`: Desactivado
+
+## Sección: **Área Antishake Ignorar**
+- *antishake_x*: Define el área de ignorancia del movimiento "shake" en el eje X (horizontal).  
+  - Ejemplo: `1` (área pequeña).
+
+- *antishake_y*: Define el área de ignorancia del movimiento "shake" en el eje Y (vertical).  
+  - Ejemplo: `2` (área pequeña).
+
+## Sección: *Opciones Experimentales*
+- *optimizar_pantalla*: Activa o desactiva la optimización de la pantalla para mejorar el rendimiento.  
+  - `1`: Activado  
+  - `0`: Desactivado
+
+## Sección: *TriggerBot*
+- *activar_triggerbot*: Activa o desactiva la función de disparo automático (TriggerBot).  
+  - `1`: Activado  
+  - `0`: Desactivado
+
+- *tamano_area_triggerbot*: Define el tamaño del área de activación del TriggerBot en píxeles.  
+  - Ejemplo: `5` (área pequeña).
+
+- *tiempo_antes_de_disparo*: Configura el tiempo de espera (en milisegundos) antes de disparar después de detectar el color.  
+  - Ejemplo: `180` ms (espera corta).
 
 **Paso 5: Desinstalación**
 
