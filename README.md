@@ -60,6 +60,10 @@
   - `0`: Desactivado
 
 ## Sección: **Área Antishake Ignorar**
+- *activar_antishake*: Activa o desactiva la funcionalidad para evitar tambaleos (Antiskake).  
+  - `1`: Activado  
+  - `0`: Desactivado
+
 - *antishake_x*: Define el área de ignorancia del movimiento "shake" en el eje X (horizontal).  
   - Ejemplo: `1` (área pequeña).
 
