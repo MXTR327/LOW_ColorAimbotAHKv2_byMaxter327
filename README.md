@@ -20,13 +20,30 @@
 **Explicación de Variables en `config.ini`:**
 # Manual de Configuración
 
-## Sección: *General*
-- *activo_por_defecto*: Define si el aimbot está activado por defecto al iniciar el script.  
+## Sección: *Teclas*
+- *reiniciar*: Define la tecla con la cual reiniciar el script.  
+  - Ejemplo: `F5`.
+- *pausar*: Define la tecla con la cual pausar el script.  
+  - Ejemplo: `F8`.
+- *salir*: Define la tecla con la cual salir del script.  
+  - Ejemplo: `F12`.
+
+## Sección: *Mouse*
+- *apuntar_con_clic_botton_izquierdo*: Configura si el aimbot debe apuntar al hacer clic con el botón izquierdo del mouse.  
   - `1`: Activado  
   - `0`: Desactivado
 
-- *color_em*: Código hexadecimal del color que el aimbot debe detectar en la pantalla para apuntar.  
-  - Ejemplo: `0xD82A22` (rojo).
+- *apuntar_con_clic_botton_derecho*: Configura si el aimbot debe apuntar al hacer clic con el botón derecho del mouse.  
+  - `1`: Activado  
+  - `0`: Desactivado
+  
+## Sección: *General*
+- *script_activo_por_defecto*: Define si el aimbot está activado por defecto al iniciar el script.  
+  - `1`: Activado  
+  - `0`: Desactivado
+    
+- *activar_color_personalizado*: Configura si vas a usar un color personalizado hexadecimal.  
+  - Ejemplo: `0x000000` .
 
 - *col_vn*: Parámetro que ajusta la sensibilidad de la detección del color, generalmente un valor entre 0 y 255.  
   - Ejemplo: `22` (bajo valor).
@@ -49,15 +66,6 @@
 
 - **area_escaneada_y**: Establece el área escaneada en el eje Y (vertical), en porcentaje del alto total de la pantalla.  
   - Ejemplo: `60` (60% de la pantalla).
-
-## Sección: *Mouse*
-- *apuntar_con_clic_botton_izquierdo*: Configura si el aimbot debe apuntar al hacer clic con el botón izquierdo del mouse.  
-  - `1`: Activado  
-  - `0`: Desactivado
-
-- *apuntar_con_clic_botton_derecho*: Configura si el aimbot debe apuntar al hacer clic con el botón derecho del mouse.  
-  - `1`: Activado  
-  - `0`: Desactivado
 
 ## Sección: **Área Antishake Ignorar**
 - *activar_antishake*: Activa o desactiva la funcionalidad para evitar tambaleos (Antiskake).  
