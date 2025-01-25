@@ -54,11 +54,11 @@
 - *compensar_y*: Ajuste de compensación vertical en píxeles para el centro del campo de visión (FOV).  
   - Ejemplo: `6` (compensación mayor a la horizontal).
 
-- *velocidad_aim_x*: Ajuste para velocidad horizontal del movimiento del aimbot.  
-  - Ejemplo: `10` (suavizado bajo).
+- *velocidad_aim_x*: Ajuste para velocidad horizontal del movimiento del aimbot valores entre 0 a 1.  
+  - Ejemplo: `0.6` (suavizado bajo).
 
-- *velocidad_aim_y*: Ajuste para velocidad vertical del movimiento del aimbot.  
-  - Ejemplo: `10` (suavizado bajo).
+- *velocidad_aim_y*: Ajuste para velocidad vertical del movimiento del aimbot valores entre 0 a 1.  
+  - Ejemplo: `0.5` (suavizado bajo).
 
 ## Sección: *Área Escaneada*
 - **area_escaneada_x**: Establece el área escaneada en el eje X (horizontal), en porcentaje del ancho total de la pantalla.  
