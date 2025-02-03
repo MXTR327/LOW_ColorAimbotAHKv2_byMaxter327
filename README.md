@@ -1,107 +1,78 @@
 **Instrucciones de uso del script**
 
 **Paso 1: Instalación**
-
 * Descarga el script y colócalo en una carpeta de tu elección.
+* Asegúrate de tener instalado AutoHotkey v2.0 o superior.
+* Mantén los archivos incluidos (`ValidationTOKEN/validacionToken.ahk`, `Gui.ahk`, etc.) en la estructura de carpetas original.
 
 **Paso 2: Ejecución**
-
 * Ejecuta el script haciendo doble clic en el archivo .exe.
-* El script se ejecutará en segundo plano y comenzará a funcionar automáticamente.
+* El script creará automáticamente un archivo `config_[RESOLUCIÓN]_[VERSIÓN].ini` adaptado a tu pantalla.
 
 **Paso 3: Uso y Configuración**
 
 **Combinaciones de Teclas:**
+* `Delete`: Muestra/Oculta el panel de configuración gráfica.
 * `F5`: Recarga el script.
-* `F8`: Activa o desactiva el script (activo por activo_por_defecto = true  en `config.ini`).
-* `F12`: Sale de la aplicación.
-* `Ctrl + Shift + D`: Muestra o Oculta las áreas de disparo.
+* `F8`: Activa/Desactiva el script (estado inicial en `script_activo_por_defecto`).
+* `F12`: Cierra la aplicación.
+* `Ctrl + Shift + D`: Muestra/Oculta las áreas de disparo y ajustes.
 
 **Explicación de Variables en `config.ini`:**
-# Manual de Configuración
 
-## Sección: *Teclas*
-- *reiniciar*: Define la tecla con la cual reiniciar el script.  
-  - Ejemplo: `F5`.
-- *pausar*: Define la tecla con la cual pausar el script.  
-  - Ejemplo: `F8`.
-- *salir*: Define la tecla con la cual salir del script.  
-  - Ejemplo: `F12`.
+### Sección: *Teclas*
+- *reiniciar*: Tecla para reiniciar el script (Ej: `F5`).
+- *pausar*: Tecla para pausar el script (Ej: `F8`).
+- *salir*: Tecla para cerrar el script (Ej: `F12`).
 
-## Sección: *Mouse*
-- *apuntar_con_clic_botton_izquierdo*: Configura si el aimbot debe apuntar al hacer clic con el botón izquierdo del mouse.  
-  - `1`: Activado  
-  - `0`: Desactivado
+### Sección: *Mouse*
+- *aimbot_click_izquierdo*: Activa el aimbot al hacer clic izquierdo (`true`/`false`).
+- *aimbot_click_derecho*: Activa el aimbot al hacer clic derecho (`true`/`false`).
 
-- *apuntar_con_clic_botton_derecho*: Configura si el aimbot debe apuntar al hacer clic con el botón derecho del mouse.  
-  - `1`: Activado  
-  - `0`: Desactivado
-  
-## Sección: *General*
-- *script_activo_por_defecto*: Define si el aimbot está activado por defecto al iniciar el script.  
-  - `1`: Activado  
-  - `0`: Desactivado
-    
-- *activar_color_personalizado*: Configura si vas a usar un color personalizado hexadecimal.  
-  - Ejemplo: `0x000000` .
+### Sección: *General*
+- *script_activo_por_defecto*: Estado inicial del script (`true`/`false`).
+- *velocidad_aim_x*: **Velocidad horizontal del aimbot (1-250).**  
+  Ej: `60` = 60% de velocidad.
+- *velocidad_aim_Y*: **Velocidad vertical del aimbot (1-250).**  
+  Ej: `50` = 50% de velocidad.
 
-- *col_vn*: Parámetro que ajusta la sensibilidad de la detección del color, generalmente un valor entre 0 y 255.  
-  - Ejemplo: `22` (bajo valor).
+### Sección: *Color*
+- *utilizar_color_personalizado*: Usar color hexadecimal personalizado (`true`/`false`).
+- *color_personalizado*: Color HEX para detección (Ej: `0x000000` para rojo).
+- *sensibilidad_color*: Tolerancia de color (0-50). Valores bajos = mayor precisión.
 
-- *compensar_x*: Ajuste de compensación horizontal en píxeles para el centro del campo de visión (FOV).  
-  - Ejemplo: `1` (compensación pequeña).
+### Sección: *Offsets*
+- *head_offset_x*: Compensación horizontal del punto de mira (0-15).
+- *head_offset_y*: Compensación vertical del punto de mira (0-50).
 
-- *compensar_y*: Ajuste de compensación vertical en píxeles para el centro del campo de visión (FOV).  
-  - Ejemplo: `6` (compensación mayor a la horizontal).
+### Sección: *Área_Aimbot*
+- *area_escaneada_x*: Ancho del área de escaneo (1-500).
+- *area_escaneada_y*: Alto del área de escaneo (1-500).
 
-- *velocidad_aim_x*: Ajuste para velocidad horizontal del movimiento del aimbot valores entre 0 a 1.  
-  - Ejemplo: `0.6` (suavizado bajo).
+### Sección: *Area_Antishake*
+- *activar_antishake*: Activar filtro de vibración (`true`/`false`).
+- *antishake_x*: Área horizontal ignorada al detectar movimiento (1-30)).
+- *antishake_y*: Área vertical ignorada al detectar movimiento (1-30).
 
-- *velocidad_aim_y*: Ajuste para velocidad vertical del movimiento del aimbot valores entre 0 a 1.  
-  - Ejemplo: `0.5` (suavizado bajo).
+### Sección: *TriggerBot*
+- *activar_triggerbot*: Disparo automático al detectar color (`true`/`false`).
+- *tamano_area_triggerbot*: Tamaño del área de activación (1-50).
+- *tiempo_antes_de_disparo*: Retardo antes de disparar (milisegundos).
 
-## Sección: *Área Escaneada*
-- **area_escaneada_x**: Establece el área escaneada en el eje X (horizontal), en porcentaje del ancho total de la pantalla.  
-  - Ejemplo: `85` (85% de la pantalla).
+### Sección: *Experimentos*
+- *desactivar_escalado_dpi*: Mejora rendimiento en pantallas HD (`true`/`false`).
+- *limite_acumulacion_recoil*: Máximo retroceso acumulable (0-100).
+- *intensidad_control_retroceso*: Fuerza de compensación de retroceso (0-10).
+- *compensacion_retroceso*: Porcentaje de compensación vertical (0-100).
+- *anti_deteccion_aimbot*: Añade variabilidad aleatoria al movimiento evitando deteccion de anticheats (`true`/`false`).
+- *humanizacion*: Limita la velocidad máxima del aimbot para parecer humano (`true`/`false`).
+- *intentos_busqueda*: Número de intentos de detección por ciclo (1-15).
 
-- **area_escaneada_y**: Establece el área escaneada en el eje Y (vertical), en porcentaje del alto total de la pantalla.  
-  - Ejemplo: `60` (60% de la pantalla).
+**Paso 4: Desinstalación**
+* Cierra el script con `F12`.
+* Elimina todos los archivos relacionados, incluido el `.ini` generado.
 
-## Sección: **Área Antishake Ignorar**
-- *activar_antishake*: Activa o desactiva la funcionalidad para evitar tambaleos (Antiskake).  
-  - `1`: Activado  
-  - `0`: Desactivado
-
-- *antishake_x*: Define el área de ignorancia del movimiento "shake" en el eje X (horizontal).  
-  - Ejemplo: `1` (área pequeña).
-
-- *antishake_y*: Define el área de ignorancia del movimiento "shake" en el eje Y (vertical).  
-  - Ejemplo: `2` (área pequeña).
-
-## Sección: *Opciones Experimentales*
-- *optimizar_pantalla*: Activa o desactiva la optimización de la pantalla para mejorar el rendimiento.  
-  - `1`: Activado  
-  - `0`: Desactivado
-
-## Sección: *TriggerBot*
-- *activar_triggerbot*: Activa o desactiva la función de disparo automático (TriggerBot).  
-  - `1`: Activado  
-  - `0`: Desactivado
-
-- *tamano_area_triggerbot*: Define el tamaño del área de activación del TriggerBot en píxeles.  
-  - Ejemplo: `5` (área pequeña).
-
-- *tiempo_antes_de_disparo*: Configura el tiempo de espera (en milisegundos) antes de disparar después de detectar el color.  
-  - Ejemplo: `180` ms (espera corta).
-
-**Paso 5: Desinstalación**
-
-* Para desinstalar el script, simplemente cierra el proceso de AutoHotkey y elimina los archivos del script.
-
-**Consejos y advertencias**
-
-* Asegúrate de leer y seguir las instrucciones de uso cuidadosamente para evitar problemas.
-* No uses el script en juegos que no permitan el uso de scripts o bots.
-* El script no es responsable de cualquier daño o pérdida causada por su uso.
-
-
+**Notas Importantes:**
+- El archivo de configuración se genera automáticamente con tu resolución y versión.
+- ¡Usa `Delete o Supr` para acceder rápidamente al panel!
+- La sección *Experimentos* contiene funciones en desarrollo - úsalas con precaución.
