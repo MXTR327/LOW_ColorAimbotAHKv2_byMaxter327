@@ -12,7 +12,7 @@
 **Paso 3: Uso y Configuración**
 
 **Combinaciones de Teclas:**
-* `Delete`: Muestra/Oculta el panel de configuración gráfica.
+* `Fin`: Muestra/Oculta el panel de configuración gráfica.
 * `F5`: Recarga el script.
 * `F8`: Activa/Desactiva el script (estado inicial en `script_activo_por_defecto`).
 * `F12`: Cierra la aplicación.
@@ -21,6 +21,8 @@
 **Explicación de Variables en `config.ini`:**
 
 ### Sección: *Teclas*
+- *mostrar_ocultar_panel*: Tecla para mostrar/ocultar el panel (Ej: `End`).
+- *mostrar_ocultar_areas*: Tecla para mostrar/ocultar areas (Ej: `+^d`).
 - *reiniciar*: Tecla para reiniciar el script (Ej: `F5`).
 - *pausar*: Tecla para pausar el script (Ej: `F8`).
 - *salir*: Tecla para cerrar el script (Ej: `F12`).
