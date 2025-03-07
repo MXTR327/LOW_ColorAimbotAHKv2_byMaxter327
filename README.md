@@ -2,8 +2,6 @@
 
 **Paso 1: Instalación**
 * Descarga el script y colócalo en una carpeta de tu elección.
-* Asegúrate de tener instalado AutoHotkey v2.0 o superior.
-* Mantén los archivos incluidos (`ValidationTOKEN/validacionToken.ahk`, `Gui.ahk`, etc.) en la estructura de carpetas original.
 
 **Paso 2: Ejecución**
 * Ejecuta el script haciendo doble clic en el archivo .exe.
